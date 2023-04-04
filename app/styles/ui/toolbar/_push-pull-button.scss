@@ -1,0 +1,56 @@
+.push-pull-dropdown-button {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+  .push-pull-dropdown {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1px;
+    z-index: 0;
+
+    .push-pull-dropdown-item {
+      display: flex;
+      flex-direction: row;
+      height: fit-content;
+      padding: 10px;
+      gap: 10px;
+      color: var(--text-color);
+      background-color: var(--box-background-color);
+      white-space: normal;
+
+      // Unset styles from Button component
+      text-align: unset;
+      border: unset;
+      border-radius: unset;
+
+      .octicon {
+        height: 16px;
+        width: 16px;
+      }
+
+      &:hover {
+        background-color: var(--box-hover-background-color);
+        color: var(--box-hover-text-color);
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--box-border-color);
+      }
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3px;
+
+        .title {
+          font-weight: 600;
+        }
+
+        .detail {
+          color: var(--text-secondary-color);
+        }
+      }
+    }
+  }
+}
